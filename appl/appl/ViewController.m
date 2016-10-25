@@ -8,6 +8,30 @@
 
 #import "ViewController.h"
 
+
+
+@interface user()
+
+@end
+
+@implementation user
+
+@synthesize username;
+@synthesize pass;
+@synthesize host;
+@synthesize port;
+
+- (id)init{
+    if(self = [super init]){
+        port = 5060;
+    }
+    return self;
+}
+
+
+@end
+
+
 @interface ViewController ()
 
 @end
@@ -25,9 +49,18 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)zbir:(id)sender {
-    int a=1+2;
+    
     
 }
 
+@synthesize usernamePolje;
+@synthesize passPolje;
+@synthesize hostPolje;
+@synthesize portPolje;
+
+- (IBAction)login:(id)sender {
+    
+    
+}
 
 @end
