@@ -13,6 +13,7 @@
 		3E0D12181DBB8E9800BEFB38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E0D12161DBB8E9800BEFB38 /* Main.storyboard */; };
 		3E0D121A1DBB8E9800BEFB38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E0D12191DBB8E9800BEFB38 /* Assets.xcassets */; };
 		3E0D121D1DBB8E9800BEFB38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E0D121B1DBB8E9800BEFB38 /* LaunchScreen.storyboard */; };
+		3E96FE0D1DC69DB3006D1BD1 /* ContactsScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E96FE0C1DC69DB3006D1BD1 /* ContactsScreenViewController.m */; };
 		3EE7835F1DBD17FE0076C3EF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE7835C1DBD17FD0076C3EF /* AudioToolbox.framework */; };
 		3EE783601DBD17FE0076C3EF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE7835D1DBD17FD0076C3EF /* AVFoundation.framework */; };
 		3EE783611DBD17FE0076C3EF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE7835E1DBD17FD0076C3EF /* CFNetwork.framework */; };
@@ -29,6 +30,8 @@
 		3E0D12191DBB8E9800BEFB38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E0D121C1DBB8E9800BEFB38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E0D121E1DBB8E9800BEFB38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E96FE0B1DC69DB3006D1BD1 /* ContactsScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsScreenViewController.h; sourceTree = "<group>"; };
+		3E96FE0C1DC69DB3006D1BD1 /* ContactsScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsScreenViewController.m; sourceTree = "<group>"; };
 		3EE783321DBD0E340076C3EF /* libpj-i386-apple-darwin_ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libpj-i386-apple-darwin_ios.a"; path = "../../Documents/pjproject-2.5.5/pjlib/lib/libpj-i386-apple-darwin_ios.a"; sourceTree = "<group>"; };
 		3EE783341DBD0E500076C3EF /* libpjsip-i386-apple-darwin_ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libpjsip-i386-apple-darwin_ios.a"; path = "../../Documents/pjproject-2.5.5/pjsip/lib/libpjsip-i386-apple-darwin_ios.a"; sourceTree = "<group>"; };
 		3EE783351DBD0E500076C3EF /* libpjsip-simple-i386-apple-darwin_ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libpjsip-simple-i386-apple-darwin_ios.a"; path = "../../Documents/pjproject-2.5.5/pjsip/lib/libpjsip-simple-i386-apple-darwin_ios.a"; sourceTree = "<group>"; };
@@ -93,6 +96,8 @@
 				3E0D12131DBB8E9800BEFB38 /* ViewController.h */,
 				3E0D12141DBB8E9800BEFB38 /* ViewController.m */,
 				3E0D12161DBB8E9800BEFB38 /* Main.storyboard */,
+				3E96FE0B1DC69DB3006D1BD1 /* ContactsScreenViewController.h */,
+				3E96FE0C1DC69DB3006D1BD1 /* ContactsScreenViewController.m */,
 				3E0D12191DBB8E9800BEFB38 /* Assets.xcassets */,
 				3E0D121B1DBB8E9800BEFB38 /* LaunchScreen.storyboard */,
 				3E0D121E1DBB8E9800BEFB38 /* Info.plist */,
@@ -214,6 +219,7 @@
 				3E0D12151DBB8E9800BEFB38 /* ViewController.m in Sources */,
 				3E0D12121DBB8E9800BEFB38 /* AppDelegate.m in Sources */,
 				3E0D120F1DBB8E9800BEFB38 /* main.m in Sources */,
+				3E96FE0D1DC69DB3006D1BD1 /* ContactsScreenViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
