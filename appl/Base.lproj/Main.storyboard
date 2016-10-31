@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -124,14 +123,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ETf-Zl-HMt">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="623" id="Chp-TU-Xru"/>
-                                </constraints>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9w-PA-jhD">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9w-PA-jhD">
                                 <frame key="frameInset" minX="313" minY="631" width="46" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.6589140698" green="0.69142521130000001" blue="0.87210573189999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Exit">
                                     <color key="titleColor" red="0.17262386658031093" green="0.17262386658031093" blue="0.17262386658031093" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -142,13 +136,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ETf-Zl-HMt" firstAttribute="leading" secondItem="gGJ-YT-HYh" secondAttribute="leadingMargin" id="75g-cz-wgh"/>
-                            <constraint firstItem="ETf-Zl-HMt" firstAttribute="trailing" secondItem="gGJ-YT-HYh" secondAttribute="trailingMargin" id="Jo0-ot-Ypd"/>
-                            <constraint firstItem="ETf-Zl-HMt" firstAttribute="trailing" secondItem="l9w-PA-jhD" secondAttribute="trailing" id="TvT-4h-WSu"/>
-                            <constraint firstItem="ETf-Zl-HMt" firstAttribute="top" secondItem="gGJ-YT-HYh" secondAttribute="top" id="bIf-7n-FAF"/>
-                            <constraint firstItem="l9w-PA-jhD" firstAttribute="top" secondItem="ETf-Zl-HMt" secondAttribute="bottom" constant="8" symbolic="YES" id="gaw-So-mn5"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yxm-hv-0WF" userLabel="First Responder" sceneMemberID="firstResponder"/>

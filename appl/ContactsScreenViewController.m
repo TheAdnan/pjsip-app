@@ -19,10 +19,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //podaci = [NSArray arrayWithObjects:@"Prvi element", nil];
+   // podaci = [NSArray arrayWithObjects:@"Adnan Kicin", @"Esed Alihodzic", nil];
     // Do any additional setup after loading the view.
 }
 
+/*- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [podaci count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *kontakti = @"item";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kontakti];
+    
+    if(cell == nil){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kontakti];
+    
+    }
+    
+    cell.textLabel.text = [podaci objectAtIndex:indexPath.row];
+    return cell;
+}
+*/
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -31,6 +49,8 @@
 - (IBAction)ExitApp:(id)sender {
     exit(0);
 }
+
+
 
 
 
