@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ContactsScreenViewController : UIViewController
+@interface ContactsScreenViewController : UIViewController //<UITableViewDelegate, UITableViewDataSource>
 
 @end

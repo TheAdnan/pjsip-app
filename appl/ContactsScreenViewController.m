@@ -14,8 +14,12 @@
 
 @implementation ContactsScreenViewController
 
+//NSArray *podaci;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //podaci = [NSArray arrayWithObjects:@"Prvi element", nil];
     // Do any additional setup after loading the view.
 }
 
@@ -23,6 +27,12 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (IBAction)ExitApp:(id)sender {
+    exit(0);
+}
+
+
 
 /*
 #pragma mark - Navigation
