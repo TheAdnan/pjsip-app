@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CallScreenViewController.h"
 
 @interface ContactsScreenViewController : UIViewController
 // <UITableViewDelegate, UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITextField *NumberInput;
 
 @end

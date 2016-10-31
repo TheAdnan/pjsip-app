@@ -13,6 +13,8 @@
 		3E0D12181DBB8E9800BEFB38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E0D12161DBB8E9800BEFB38 /* Main.storyboard */; };
 		3E0D121A1DBB8E9800BEFB38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E0D12191DBB8E9800BEFB38 /* Assets.xcassets */; };
 		3E0D121D1DBB8E9800BEFB38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E0D121B1DBB8E9800BEFB38 /* LaunchScreen.storyboard */; };
+		3E8353861DC78B1100DD5AF6 /* CallScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8353851DC78B1100DD5AF6 /* CallScreenViewController.m */; };
+		3E8353881DC78F9200DD5AF6 /* phone-circle-red-2-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E8353871DC78F9200DD5AF6 /* phone-circle-red-2-128.png */; };
 		3E96FE0D1DC69DB3006D1BD1 /* ContactsScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E96FE0C1DC69DB3006D1BD1 /* ContactsScreenViewController.m */; };
 		3EE7835F1DBD17FE0076C3EF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE7835C1DBD17FD0076C3EF /* AudioToolbox.framework */; };
 		3EE783601DBD17FE0076C3EF /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE7835D1DBD17FD0076C3EF /* AVFoundation.framework */; };
@@ -30,6 +32,9 @@
 		3E0D12191DBB8E9800BEFB38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E0D121C1DBB8E9800BEFB38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E0D121E1DBB8E9800BEFB38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E8353841DC78B1100DD5AF6 /* CallScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallScreenViewController.h; sourceTree = "<group>"; };
+		3E8353851DC78B1100DD5AF6 /* CallScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallScreenViewController.m; sourceTree = "<group>"; };
+		3E8353871DC78F9200DD5AF6 /* phone-circle-red-2-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phone-circle-red-2-128.png"; sourceTree = "<group>"; };
 		3E96FE0B1DC69DB3006D1BD1 /* ContactsScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsScreenViewController.h; sourceTree = "<group>"; };
 		3E96FE0C1DC69DB3006D1BD1 /* ContactsScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsScreenViewController.m; sourceTree = "<group>"; };
 		3EE783321DBD0E340076C3EF /* libpj-i386-apple-darwin_ios.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libpj-i386-apple-darwin_ios.a"; path = "../../Documents/pjproject-2.5.5/pjlib/lib/libpj-i386-apple-darwin_ios.a"; sourceTree = "<group>"; };
@@ -91,9 +96,12 @@
 		3E0D120C1DBB8E9800BEFB38 /* appl */ = {
 			isa = PBXGroup;
 			children = (
+				3E8353841DC78B1100DD5AF6 /* CallScreenViewController.h */,
+				3E8353851DC78B1100DD5AF6 /* CallScreenViewController.m */,
 				3E0D12101DBB8E9800BEFB38 /* AppDelegate.h */,
 				3E0D12111DBB8E9800BEFB38 /* AppDelegate.m */,
 				3E0D12131DBB8E9800BEFB38 /* ViewController.h */,
+				3E8353871DC78F9200DD5AF6 /* phone-circle-red-2-128.png */,
 				3E0D12141DBB8E9800BEFB38 /* ViewController.m */,
 				3E0D12161DBB8E9800BEFB38 /* Main.storyboard */,
 				3E96FE0B1DC69DB3006D1BD1 /* ContactsScreenViewController.h */,
@@ -204,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E0D121D1DBB8E9800BEFB38 /* LaunchScreen.storyboard in Resources */,
+				3E8353881DC78F9200DD5AF6 /* phone-circle-red-2-128.png in Resources */,
 				3E0D121A1DBB8E9800BEFB38 /* Assets.xcassets in Resources */,
 				3E0D12181DBB8E9800BEFB38 /* Main.storyboard in Resources */,
 			);
@@ -220,6 +229,7 @@
 				3E0D12121DBB8E9800BEFB38 /* AppDelegate.m in Sources */,
 				3E0D120F1DBB8E9800BEFB38 /* main.m in Sources */,
 				3E96FE0D1DC69DB3006D1BD1 /* ContactsScreenViewController.m in Sources */,
+				3E8353861DC78B1100DD5AF6 /* CallScreenViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

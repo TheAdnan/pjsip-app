@@ -7,6 +7,7 @@
 //
 
 #import "ContactsScreenViewController.h"
+#import "ViewController.h"
 
 @interface ContactsScreenViewController ()
 
@@ -45,6 +46,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)PassCalleeID:(id)sender {
+    [[NSUserDefaults standardUserDefaults] setObject:_NumberInput.text forKey:@"calleeid"];
+}
 
 - (IBAction)ExitApp:(id)sender {
     exit(0);
@@ -53,6 +57,14 @@
 
 
 
+/*-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"MakeCallSegue"]){
+    CallScreenViewController *calleID = (CallScreenViewController *)segue.destinationViewController;
+    calleID.CalleeNumber.text = _NumberInput.text;
+    }
+}
+
+*/
 
 /*
 #pragma mark - Navigation
