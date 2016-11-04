@@ -27,35 +27,8 @@ static void on_reg_state2(pjsua_acc_id accountID, pjsua_reg_info *info);
 static void on_call_media_state(pjsua_call_id callID);
 static void error_exit1(const char *msg, pj_status_t stat);
 
-
-
-@interface CallScreenViewController ()
-
-@end
-
-@implementation CallScreenViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    _CalleeNumber.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"calleeid"];
-    
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    
-}
-- (IBAction)HangUp:(id)sender {
-    [self performSegueWithIdentifier:@"HangUp" sender:self];
-}
-
-
-@end
-
-
 @interface PJ ()
 @end
-
 
 @implementation PJ{
     pjsua_acc_id accountID;
@@ -131,7 +104,7 @@ static void error_exit1(const char *msg, pj_status_t stat);
         
         pjsua_transport_config cfg;
         pjsua_transport_config_default(&cfg);
-        cfg.port = 5080;
+        cfg.port = [[[NSUserDefaults standardUserDefaults] objectForKey:@"port"] intValue];
         
         status = pjsua_transport_create(PJSIP_TRANSPORT_UDP, &cfg, NULL);
         if(status != PJ_SUCCESS) error_exit1("Error in creating transport", status);
@@ -164,7 +137,7 @@ static void error_exit1(const char *msg, pj_status_t stat);
         cfg.cred_info[0].realm = pj_str(domain);
         cfg.cred_info[0].username = pj_str(username);
         cfg.cred_info[0].data_type = PJSIP_CRED_DATA_PLAIN_PASSWD;
-        cfg.cred_info[0].data = pj_str(pass);
+        cfg.cred_info[0].data = pj_str("Adnanekiga1");
         
         status = pjsua_acc_add(&cfg, PJ_TRUE, &accountID);
         if(status != PJ_SUCCESS) error_exit1("Error adding account", status);
@@ -191,6 +164,56 @@ static void error_exit1(const char *msg, pj_status_t stat);
 }
 
 @end
+
+@interface CallScreenViewController ()
+
+
+
+@end
+
+@implementation CallScreenViewController
+
+PJ *pjcall;
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    _CalleeNumber.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"calleeid"];
+    
+    NSUserDefaults *userdata = [NSUserDefaults standardUserDefaults];
+    NSString *username = [userdata objectForKey:@"username"];
+    NSString *pass = [userdata objectForKey:@"pass"];
+    NSString *host = [userdata objectForKey:@"host"];
+    NSString *port = [userdata objectForKey:@"port"];
+    
+   [pjcall startPjsipAndRegisterOnServer:[host UTF8String] withUserName:[username UTF8String] andPassword:[pass UTF8String] callback:^(BOOL success){
+        [self loginComplete:success];
+    }];
+    
+    [pjcall makeCall:"sip:500@ekiga.net"];
+    
+}
+
+- (void)loginComplete:(BOOL)success{
+    
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    
+}
+- (IBAction)HangUp:(id)sender {
+    [self performSegueWithIdentifier:@"HangUp" sender:self];
+    [pjcall endCall];
+}
+
+
+@end
+
+
+
+
+
+
 
 static void on_incoming_call(pjsua_acc_id accountID, pjsua_call_id callID, pjsip_rx_data *rdata)
 {

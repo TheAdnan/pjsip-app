@@ -10,11 +10,7 @@
 #import "ContactsScreenViewController.h"
 #import <Foundation/Foundation.h>
 
-@interface CallScreenViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UILabel *CalleeNumber;
 
-
-@end
 
 @interface PJ : NSObject
 
@@ -28,5 +24,13 @@ typedef void (^RegisterCallBack)(BOOL success);
 -(void)makeCall:(char*)uri;
 
 -(void)endCall;
+
+@end
+
+
+@interface CallScreenViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *CalleeNumber;
+
+
 
 @end

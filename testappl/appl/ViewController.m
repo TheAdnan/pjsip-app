@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ContactsScreenViewController.h"
+#import "CallScreenViewController.h"
 
 @interface user()
 
@@ -78,7 +79,7 @@
     NSString *port = [portPolje text];
     
     
-    if([username isEqualToString:@"adnan"] && [pass isEqualToString:@"kicin1"]){
+    if([username isEqualToString:@"kicin"] && [pass isEqualToString:@"Adnanekiga1"]){
         
         
         NSUserDefaults *userdata = [NSUserDefaults standardUserDefaults];
@@ -99,9 +100,17 @@
      _ErrorMsg.text = @"Wrong username or password!";
     }
     
+   /* [[PJ sharedPJ] startPjsipAndRegisterOnServer:[host UTF8String] withUserName:[username UTF8String] andPassword:[pass UTF8String] callback:^(BOOL success){
+        [self loginComplete:success];
+    }];
+    */
     
     
     
+}
+
+- (void)loginComplete:(BOOL)success{
+
 }
 
 @end

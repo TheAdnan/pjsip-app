@@ -20,29 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-   // podaci = [NSArray arrayWithObjects:@"Adnan Kicin", @"Esed Alihodzic", nil];
-    // Do any additional setup after loading the view.
 }
-
-/*- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [podaci count];
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *kontakti = @"item";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kontakti];
-    
-    if(cell == nil){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kontakti];
-    
-    }
-    
-    cell.textLabel.text = [podaci objectAtIndex:indexPath.row];
-    return cell;
-}
-*/
-- (void)didReceiveMemoryWarning {
+    - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
@@ -56,24 +35,5 @@
 
 
 
-
-/*-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([segue.identifier isEqualToString:@"MakeCallSegue"]){
-    CallScreenViewController *calleID = (CallScreenViewController *)segue.destinationViewController;
-    calleID.CalleeNumber.text = _NumberInput.text;
-    }
-}
-
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
