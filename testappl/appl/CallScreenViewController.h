@@ -30,6 +30,9 @@ typedef void (^RegisterCallBack)(BOOL success);
 
 @interface CallScreenViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *CalleeNumber;
+@property (weak, nonatomic) IBOutlet UILabel *CalleeName;
+@property (weak, nonatomic) IBOutlet UILabel *Secs;
+@property (weak, nonatomic) IBOutlet UILabel *Mins;
 
 
 

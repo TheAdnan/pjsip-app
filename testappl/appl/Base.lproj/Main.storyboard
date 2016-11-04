@@ -225,7 +225,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="CalleeName" destination="Jad-pP-Z23" id="Nad-ix-xhu"/>
                         <outlet property="CalleeNumber" destination="cZc-Ls-sgc" id="OyM-Ra-iAJ"/>
+                        <outlet property="Mins" destination="Tkb-ul-2vj" id="AoG-Jx-D1K"/>
+                        <outlet property="Secs" destination="6wB-hz-qkl" id="kwk-TJ-9Gt"/>
                         <segue destination="Rim-Fy-9cu" kind="show" identifier="HangUp" id="1tg-om-YMT"/>
                     </connections>
                 </viewController>

@@ -19,13 +19,17 @@
 
 
 
-
+#pragma mark pjsip static functions prototypes
 
 static void on_incoming_call(pjsua_acc_id accountID, pjsua_call_id callID, pjsip_rx_data *rdata);
 static void on_call_state(pjsua_call_id callID, pjsip_event *event);
 static void on_reg_state2(pjsua_acc_id accountID, pjsua_reg_info *info);
 static void on_call_media_state(pjsua_call_id callID);
 static void error_exit1(const char *msg, pj_status_t stat);
+
+
+
+#pragma PJ interface and implementation
 
 @interface PJ ()
 @end
@@ -35,9 +39,10 @@ static void error_exit1(const char *msg, pj_status_t stat);
     RegisterCallBack callBack;
     
     
-    
 }
 
+
+//init
 + (PJ *)sharedPJ{
     static PJ *instance = nil;
     static dispatch_once_t onceToken;
@@ -50,14 +55,15 @@ static void error_exit1(const char *msg, pj_status_t stat);
 }
 
 
-
-
-
+//Hang up call
 - (void)endCall{
     pjsua_call_hangup_all();
+      NSLog(@"radi");
     
 }
 
+
+//Make a call
 - (void)makeCall:(char*)uri
 {
     
@@ -66,15 +72,17 @@ static void error_exit1(const char *msg, pj_status_t stat);
     
     status = pjsua_call_make_call(accountID, &uriX, 0, NULL, NULL, NULL);
     if(status != PJ_SUCCESS) error_exit1("Error occurred while making a call", status);
+      NSLog(@"radi");
     
 }
 
+//starting pjsip and register on server
 - (int)startPjsipAndRegisterOnServer:(char *) domain
                         withUserName:(char *) username andPassword:(char *) pass callback:(RegisterCallBack) callback{
     
     
     pj_status_t status;
-    
+    NSLog(@"radi");
     status = pjsua_create();
     if(status != PJ_SUCCESS) error_exit1("Error", status);
     
@@ -141,6 +149,7 @@ static void error_exit1(const char *msg, pj_status_t stat);
         
         status = pjsua_acc_add(&cfg, PJ_TRUE, &accountID);
         if(status != PJ_SUCCESS) error_exit1("Error adding account", status);
+        else if(status == PJ_SUCCESS) error_exit1("radi", status);
     }
     
     callBack = callback;
@@ -165,9 +174,9 @@ static void error_exit1(const char *msg, pj_status_t stat);
 
 @end
 
+#pragma mark CallScreenViewController interface and implementation
+
 @interface CallScreenViewController ()
-
-
 
 @end
 
@@ -177,19 +186,49 @@ PJ *pjcall;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _CalleeNumber.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"calleeid"];
+    
+    
+    //Loading the user data
     
     NSUserDefaults *userdata = [NSUserDefaults standardUserDefaults];
     NSString *username = [userdata objectForKey:@"username"];
+    _CalleeNumber.text = [userdata objectForKey:@"calleeid"];
     NSString *pass = [userdata objectForKey:@"pass"];
     NSString *host = [userdata objectForKey:@"host"];
     NSString *port = [userdata objectForKey:@"port"];
     
+    
+    //Registration of pjsip
    [pjcall startPjsipAndRegisterOnServer:[host UTF8String] withUserName:[username UTF8String] andPassword:[pass UTF8String] callback:^(BOOL success){
-        [self loginComplete:success];
+       [self loginComplete:success];
     }];
     
-    [pjcall makeCall:"sip:500@ekiga.net"];
+    //Identifying callee name
+    if([_CalleeNumber.text isEqualToString:@"500@ekiga.net"]){
+        _CalleeName.text = @"Echo";
+    }
+    else if([_CalleeNumber.text isEqualToString:@"5011121@ekiga.net"]){
+        _CalleeName.text = @"Public conference room";
+    }
+    else{
+        _CalleeName.text = @"Unknown";
+    }
+    
+    
+    //pjsip make a call
+    [pjcall makeCall:[_CalleeNumber.text UTF8String]];
+    
+    
+    
+   /*UIAlertController* poruka = [UIAlertController alertControllerWithTitle:@"Greska" message:[NSString stringWithUTF8String:"poruka"] preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    
+    
+    [self presentViewController:poruka animated:YES completion:nil];
+    */
+
+    
     
 }
 
@@ -202,6 +241,7 @@ PJ *pjcall;
     
 }
 - (IBAction)HangUp:(id)sender {
+    //ending call and segue back to ContactScreen
     [self performSegueWithIdentifier:@"HangUp" sender:self];
     [pjcall endCall];
 }
@@ -213,7 +253,7 @@ PJ *pjcall;
 
 
 
-
+#pragma mark static functions implementation
 
 static void on_incoming_call(pjsua_acc_id accountID, pjsua_call_id callID, pjsip_rx_data *rdata)
 {
@@ -259,6 +299,12 @@ static void on_call_media_state(pjsua_call_id callID){
     }
 }
 static void error_exit1(const char *msg, pj_status_t stat){
+
+    
+  UIAlertView *poruka = [[UIAlertView alloc] initWithTitle:@"Error" message:[NSString stringWithUTF8String:msg] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [poruka show];
+   
+   
     pjsua_perror("pj.c", msg, stat);
     pjsua_destroy();
     exit(1);
