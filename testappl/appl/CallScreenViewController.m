@@ -82,7 +82,6 @@ static void error_exit1(const char *msg, pj_status_t stat);
     
     
     pj_status_t status;
-    NSLog(@"radi");
     status = pjsua_create();
     if(status != PJ_SUCCESS) error_exit1("Error", status);
     
@@ -129,6 +128,8 @@ static void error_exit1(const char *msg, pj_status_t stat);
         pjsua_acc_config cfg;
         pjsua_acc_config_default(&cfg);
         
+        
+        
         char sipID[50];
         sprintf(sipID, "sip:%s@%s", username, domain);
         cfg.id = pj_str(sipID);
@@ -147,9 +148,12 @@ static void error_exit1(const char *msg, pj_status_t stat);
         cfg.cred_info[0].data_type = PJSIP_CRED_DATA_PLAIN_PASSWD;
         cfg.cred_info[0].data = pj_str("Adnanekiga1");
         
+        char contactURI[50];
+        sprintf(contactURI, ";sip:500@ekiga.net:5060");
+        cfg.contact_uri_params = pj_str(contactURI);
+        
         status = pjsua_acc_add(&cfg, PJ_TRUE, &accountID);
         if(status != PJ_SUCCESS) error_exit1("Error adding account", status);
-        else if(status == PJ_SUCCESS) error_exit1("radi", status);
     }
     
     callBack = callback;
@@ -160,6 +164,7 @@ static void error_exit1(const char *msg, pj_status_t stat);
 
 - (void)handleRegistrationStateChangeWithRegInfo: (pjsua_reg_info *) info
 {
+
     switch(info->cbparam->code){
         case 200:
             callBack(YES);
@@ -169,6 +174,8 @@ static void error_exit1(const char *msg, pj_status_t stat);
             break;
         default: break;
     }
+
+    
     
 }
 
@@ -197,9 +204,11 @@ PJ *pjcall;
     NSString *host = [userdata objectForKey:@"host"];
     NSString *port = [userdata objectForKey:@"port"];
     
+
+    
     
     //Registration of pjsip
-   [pjcall startPjsipAndRegisterOnServer:[host UTF8String] withUserName:[username UTF8String] andPassword:[pass UTF8String] callback:^(BOOL success){
+   [[PJ sharedPJ] startPjsipAndRegisterOnServer:[host UTF8String] withUserName:[username UTF8String] andPassword:[pass UTF8String] callback:^(BOOL success){
        [self loginComplete:success];
     }];
     
@@ -215,8 +224,7 @@ PJ *pjcall;
     }
     
     
-    //pjsip make a call
-    [pjcall makeCall:[_CalleeNumber.text UTF8String]];
+    [[PJ sharedPJ] makeCall:[_CalleeNumber.text UTF8String]];
     
     
     
@@ -232,8 +240,27 @@ PJ *pjcall;
     
 }
 
+
+
 - (void)loginComplete:(BOOL)success{
-    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (success) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Login Succeeded"
+                                                            message:nil
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        } else {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Login Failed"
+                                                            message:nil
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        }
+    });
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -283,7 +310,7 @@ static void on_call_state(pjsua_call_id callID, pjsip_event *event)
 
 
 static void on_reg_state2(pjsua_acc_id accountID, pjsua_reg_info *info){
-    [[PJ sharedPJ] handleRegistrationStateChangeWithRegInfo: info];
+  [[PJ sharedPJ] handleRegistrationStateChangeWithRegInfo: info];
     
 }
 
@@ -301,10 +328,10 @@ static void on_call_media_state(pjsua_call_id callID){
 static void error_exit1(const char *msg, pj_status_t stat){
 
     
-  UIAlertView *poruka = [[UIAlertView alloc] initWithTitle:@"Error" message:[NSString stringWithUTF8String:msg] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-    [poruka show];
+/*  UIAlertView *poruka = [[UIAlertView alloc] initWithTitle:@"Error" message:[NSString stringWithUTF8String:msg] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [poruka show]; */
    
-   
+    NSLog([NSString stringWithUTF8String:msg]);
     pjsua_perror("pj.c", msg, stat);
     pjsua_destroy();
     exit(1);

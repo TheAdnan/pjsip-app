@@ -42,6 +42,8 @@
     
    // user *usr = [[user alloc] init];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    passPolje.clearsOnBeginEditing = NO;
    NSUserDefaults *userdata = [NSUserDefaults standardUserDefaults];
     NSString *username = [userdata objectForKey:@"username"];
     NSString *pass = [userdata objectForKey:@"pass"];
@@ -99,8 +101,8 @@
     else{
      _ErrorMsg.text = @"Wrong username or password!";
     }
-    
-   /* [[PJ sharedPJ] startPjsipAndRegisterOnServer:[host UTF8String] withUserName:[username UTF8String] andPassword:[pass UTF8String] callback:^(BOOL success){
+   /*
+   [[PJ sharedPJ] startPjsipAndRegisterOnServer:[host UTF8String] withUserName:[username UTF8String] andPassword:[pass UTF8String] callback:^(BOOL success){
         [self loginComplete:success];
     }];
     */
