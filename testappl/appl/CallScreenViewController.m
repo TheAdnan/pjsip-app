@@ -39,6 +39,7 @@ static void error_exit1(const char *msg, pj_status_t stat);
     RegisterCallBack callBack;
     
     
+    
 }
 
 
@@ -71,9 +72,10 @@ static void error_exit1(const char *msg, pj_status_t stat);
     pj_str_t uriX = pj_str(uri);
     
     status = pjsua_call_make_call(accountID, &uriX, 0, NULL, NULL, NULL);
-    if(status != PJ_SUCCESS) error_exit1("Error occurred while making a call", status);
-      NSLog(@"radi");
-    
+    if(status != PJ_SUCCESS)
+        
+    error_exit1("Error occurred while making a call", status);
+        
 }
 
 //starting pjsip and register on server
@@ -222,10 +224,38 @@ PJ *pjcall;
     NSString* callURI = [NSString stringWithFormat:@"sip:%@", _CalleeNumber.text];
     
     [[PJ sharedPJ] makeCall:[callURI UTF8String]];
-
     
+    _Secs.text = @"00";
+    _Mins.text = @"00";
+    // Call duration timer
+    NSTimer *t = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(tajmer) userInfo:nil repeats:YES];
     
 }
+
+//timer selector
+- (void)tajmer{
+    int i = [_Secs.text intValue];
+    int j = [_Mins.text intValue];
+    i++;
+    if(i<10)
+    _Secs.text = [NSString stringWithFormat:@"0%d", i];
+    else if(i>59){
+        i = 0;
+        _Secs.text = [NSString stringWithFormat:@"0%d", i];
+        j++;
+        if(j>10) _Mins.text = [NSString stringWithFormat:@"%d", j];
+        _Mins.text = [NSString stringWithFormat:@"0%d", j];
+    }
+    else _Secs.text = [NSString stringWithFormat:@"%d", i];
+
+}
+
+- (IBAction)HangUp:(id)sender {
+    //ending call and segue back to ContactScreen
+    [self performSegueWithIdentifier:@"HangUp" sender:self];
+    [pjcall endCall];
+}
+
 
 
 
@@ -255,12 +285,6 @@ PJ *pjcall;
     [super didReceiveMemoryWarning];
     
 }
-- (IBAction)HangUp:(id)sender {
-    //ending call and segue back to ContactScreen
-    [self performSegueWithIdentifier:@"HangUp" sender:self];
-    [pjcall endCall];
-}
-
 
 @end
 
