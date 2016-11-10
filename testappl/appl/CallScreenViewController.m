@@ -77,10 +77,10 @@ static void error_exit1(const char *msg, pj_status_t stat);
 }
 
 //starting pjsip and register on server
-- (int)startPjsipAndRegisterOnServer:(char *) domain
-                        withUserName:(char *) username andPassword:(char *) pass callback:(RegisterCallBack) callback{
+//- (int)startPjsipAndRegisterOnServer:(char *) domain                         withUserName:(char *) username andPassword:(char *) pass callback:(RegisterCallBack) callback{
     
-    
+//starting pjsip and register on server
+- (int)startPjsipAndRegisterOnServer:(char *) domain                         withUserName:(char *) username andPassword:(char *) pass{
     pj_status_t status;
     status = pjsua_create();
     if(status != PJ_SUCCESS) error_exit1("Error", status);
@@ -92,7 +92,7 @@ static void error_exit1(const char *msg, pj_status_t stat);
         cf.cb.on_incoming_call = &on_incoming_call;
         cf.cb.on_call_state = &on_call_state;
         cf.cb.on_call_media_state = &on_call_media_state;
-        cf.cb.on_reg_state2 = &on_reg_state2;
+     //   cf.cb.on_reg_state2 = &on_reg_state2;
         
         pjsua_logging_config log_cfg;
         pjsua_logging_config_default(&log_cfg);
@@ -128,8 +128,8 @@ static void error_exit1(const char *msg, pj_status_t stat);
         pjsua_acc_config cfg;
         pjsua_acc_config_default(&cfg);
         
-        
-        
+       
+        username = [[[NSUserDefaults standardUserDefaults] objectForKey:@"username"] UTF8String];
         char sipID[50];
         sprintf(sipID, "sip:%s@%s", username, domain);
         cfg.id = pj_str(sipID);
@@ -148,15 +148,13 @@ static void error_exit1(const char *msg, pj_status_t stat);
         cfg.cred_info[0].data_type = PJSIP_CRED_DATA_PLAIN_PASSWD;
         cfg.cred_info[0].data = pj_str("Adnanekiga1");
         
-        char contactURI[50];
-        sprintf(contactURI, ";sip:500@ekiga.net:5060");
-        cfg.contact_uri_params = pj_str(contactURI);
+       
         
         status = pjsua_acc_add(&cfg, PJ_TRUE, &accountID);
         if(status != PJ_SUCCESS) error_exit1("Error adding account", status);
     }
     
-    callBack = callback;
+   // callBack = callback;
     
     return 0;
 }
@@ -208,9 +206,7 @@ PJ *pjcall;
     
     
     //Registration of pjsip
-   [[PJ sharedPJ] startPjsipAndRegisterOnServer:[host UTF8String] withUserName:[username UTF8String] andPassword:[pass UTF8String] callback:^(BOOL success){
-       [self loginComplete:success];
-    }];
+   [[PJ sharedPJ] startPjsipAndRegisterOnServer:[host UTF8String] withUserName:[username UTF8String] andPassword:[pass UTF8String]];
     
     //Identifying callee name
     if([_CalleeNumber.text isEqualToString:@"500@ekiga.net"]){
@@ -223,18 +219,9 @@ PJ *pjcall;
         _CalleeName.text = @"Unknown";
     }
     
+    NSString* callURI = [NSString stringWithFormat:@"sip:%@", _CalleeNumber.text];
     
-    [[PJ sharedPJ] makeCall:[_CalleeNumber.text UTF8String]];
-    
-    
-    
-   /*UIAlertController* poruka = [UIAlertController alertControllerWithTitle:@"Greska" message:[NSString stringWithUTF8String:"poruka"] preferredStyle:UIAlertControllerStyleAlert];
-    
-    UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
-    
-    
-    [self presentViewController:poruka animated:YES completion:nil];
-    */
+    [[PJ sharedPJ] makeCall:[callURI UTF8String]];
 
     
     
@@ -243,7 +230,7 @@ PJ *pjcall;
 
 
 - (void)loginComplete:(BOOL)success{
-    dispatch_async(dispatch_get_main_queue(), ^{
+    /* dispatch_async(dispatch_get_main_queue(), ^{
         if (success) {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Login Succeeded"
                                                             message:nil
@@ -260,6 +247,7 @@ PJ *pjcall;
             [alert show];
         }
     });
+     */
 
 }
 
@@ -300,11 +288,11 @@ static void on_incoming_call(pjsua_acc_id accountID, pjsua_call_id callID, pjsip
 
 static void on_call_state(pjsua_call_id callID, pjsip_event *event)
 {
-    pjsua_call_info inf;
+    /*pjsua_call_info inf;
     PJ_UNUSED_ARG(event);
     pjsua_call_get_info(callID, &inf);
     PJ_LOG(3, ("pj.c", "Call %d state = %.*s", (int)inf.remote_info.slen, inf.remote_info.ptr));
-    
+    */
     
 }
 

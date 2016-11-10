@@ -74,13 +74,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "appl/CallScreenViewController.m"
-            timestampString = "499976239.805565"
+            timestampString = "500458565.185282"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
-            landmarkName = "-startPjsipAndRegisterOnServer:withUserName:andPassword:callback:"
-            landmarkType = "7">
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "@implementation PJ"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -131,22 +131,6 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "appl/CallScreenViewController.m"
-            timestampString = "500143526.958692"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "213"
-            endingLineNumber = "213"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "appl/CallScreenViewController.m"
             timestampString = "499980800.403744"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
@@ -172,11 +156,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "appl/CallScreenViewController.m"
-            timestampString = "500143526.958692"
+            timestampString = "500459161.696229"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "211"
-            endingLineNumber = "211"
+            startingLineNumber = "209"
+            endingLineNumber = "209"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
             <Actions>
@@ -229,7 +213,39 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "appl/CallScreenViewController.m"
-            timestampString = "500143526.958692"
+            timestampString = "500459161.696229"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "212"
+            endingLineNumber = "212"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "appl/CallScreenViewController.m"
+            timestampString = "500459161.696229"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "213"
+            endingLineNumber = "213"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "appl/CallScreenViewController.m"
+            timestampString = "500459161.696229"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "216"
@@ -245,43 +261,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "appl/CallScreenViewController.m"
-            timestampString = "500143526.958692"
+            timestampString = "500459161.696229"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "217"
-            endingLineNumber = "217"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "appl/CallScreenViewController.m"
-            timestampString = "500143526.958692"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "220"
-            endingLineNumber = "220"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "appl/CallScreenViewController.m"
-            timestampString = "500143526.958692"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "223"
-            endingLineNumber = "223"
+            startingLineNumber = "219"
+            endingLineNumber = "219"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
@@ -417,15 +401,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "appl/CallScreenViewController.m"
-            timestampString = "500143526.958692"
+            timestampString = "500461196.54989"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "227"
-            endingLineNumber = "227"
+            startingLineNumber = "224"
+            endingLineNumber = "224"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
@@ -677,11 +661,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "appl/CallScreenViewController.m"
-            timestampString = "500143526.958692"
+            timestampString = "500461196.54989"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "334"
-            endingLineNumber = "334"
+            startingLineNumber = "322"
+            endingLineNumber = "322"
             landmarkName = "error_exit1()"
             landmarkType = "9">
          </BreakpointContent>
@@ -693,11 +677,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "appl/CallScreenViewController.m"
-            timestampString = "500143526.958692"
+            timestampString = "500461196.54989"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "335"
-            endingLineNumber = "335"
+            startingLineNumber = "323"
+            endingLineNumber = "323"
             landmarkName = "error_exit1()"
             landmarkType = "9">
          </BreakpointContent>
@@ -709,11 +693,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "appl/CallScreenViewController.m"
-            timestampString = "500143526.958692"
+            timestampString = "500461196.54989"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "336"
-            endingLineNumber = "336"
+            startingLineNumber = "324"
+            endingLineNumber = "324"
             landmarkName = "error_exit1()"
             landmarkType = "9">
          </BreakpointContent>
@@ -725,11 +709,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "appl/CallScreenViewController.m"
-            timestampString = "500143526.958692"
+            timestampString = "500461196.54989"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "337"
-            endingLineNumber = "337"
+            startingLineNumber = "325"
+            endingLineNumber = "325"
             landmarkName = "error_exit1()"
             landmarkType = "9">
          </BreakpointContent>
@@ -917,12 +901,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "appl/CallScreenViewController.m"
-            timestampString = "500143368.183762"
+            timestampString = "500459161.696229"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "141"
             endingLineNumber = "141"
-            landmarkName = "-startPjsipAndRegisterOnServer:withUserName:andPassword:callback:"
+            landmarkName = "-startPjsipAndRegisterOnServer:withUserName:andPassword:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -933,12 +917,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "appl/CallScreenViewController.m"
-            timestampString = "500143368.183762"
+            timestampString = "500459161.696229"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "143"
             endingLineNumber = "143"
-            landmarkName = "-startPjsipAndRegisterOnServer:withUserName:andPassword:callback:"
+            landmarkName = "-startPjsipAndRegisterOnServer:withUserName:andPassword:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -949,12 +933,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "appl/CallScreenViewController.m"
-            timestampString = "500143368.183762"
+            timestampString = "500459161.696229"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "142"
             endingLineNumber = "142"
-            landmarkName = "-startPjsipAndRegisterOnServer:withUserName:andPassword:callback:"
+            landmarkName = "-startPjsipAndRegisterOnServer:withUserName:andPassword:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -965,12 +949,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "appl/CallScreenViewController.m"
-            timestampString = "500143368.183762"
+            timestampString = "500459161.696229"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "145"
             endingLineNumber = "145"
-            landmarkName = "-startPjsipAndRegisterOnServer:withUserName:andPassword:callback:"
+            landmarkName = "-startPjsipAndRegisterOnServer:withUserName:andPassword:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -981,12 +965,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "appl/CallScreenViewController.m"
-            timestampString = "500143368.183762"
+            timestampString = "500459161.696229"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "147"
             endingLineNumber = "147"
-            landmarkName = "-startPjsipAndRegisterOnServer:withUserName:andPassword:callback:"
+            landmarkName = "-startPjsipAndRegisterOnServer:withUserName:andPassword:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -997,12 +981,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "appl/CallScreenViewController.m"
-            timestampString = "500143368.183762"
+            timestampString = "500459161.696229"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "146"
             endingLineNumber = "146"
-            landmarkName = "-startPjsipAndRegisterOnServer:withUserName:andPassword:callback:"
+            landmarkName = "-startPjsipAndRegisterOnServer:withUserName:andPassword:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1013,12 +997,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "appl/CallScreenViewController.m"
-            timestampString = "500143368.183762"
+            timestampString = "500459161.696229"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "148"
             endingLineNumber = "148"
-            landmarkName = "-startPjsipAndRegisterOnServer:withUserName:andPassword:callback:"
+            landmarkName = "-startPjsipAndRegisterOnServer:withUserName:andPassword:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1029,12 +1013,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "appl/CallScreenViewController.m"
-            timestampString = "500143368.183762"
+            timestampString = "500459161.696229"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "149"
             endingLineNumber = "149"
-            landmarkName = "-startPjsipAndRegisterOnServer:withUserName:andPassword:callback:"
+            landmarkName = "-startPjsipAndRegisterOnServer:withUserName:andPassword:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1045,12 +1029,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "appl/CallScreenViewController.m"
-            timestampString = "500143526.958692"
+            timestampString = "500459161.696229"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
-            landmarkName = "-startPjsipAndRegisterOnServer:withUserName:andPassword:callback:"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
+            landmarkName = "-startPjsipAndRegisterOnServer:withUserName:andPassword:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1061,12 +1045,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "appl/CallScreenViewController.m"
-            timestampString = "500143526.958692"
+            timestampString = "500459161.696229"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
-            landmarkName = "-startPjsipAndRegisterOnServer:withUserName:andPassword:callback:"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
+            landmarkName = "-startPjsipAndRegisterOnServer:withUserName:andPassword:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1077,12 +1061,140 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "appl/CallScreenViewController.m"
-            timestampString = "500143526.958692"
+            timestampString = "500459161.696229"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
-            landmarkName = "-startPjsipAndRegisterOnServer:withUserName:andPassword:callback:"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
+            landmarkName = "-startPjsipAndRegisterOnServer:withUserName:andPassword:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "appl/CallScreenViewController.m"
+            timestampString = "500458755.381415"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "-startPjsipAndRegisterOnServer:withUserName:andPassword:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "appl/CallScreenViewController.m"
+            timestampString = "500458989.829494"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "-startPjsipAndRegisterOnServer:withUserName:andPassword:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "appl/CallScreenViewController.m"
+            timestampString = "500459139.72876"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "-startPjsipAndRegisterOnServer:withUserName:andPassword:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "appl/CallScreenViewController.m"
+            timestampString = "500459140.826299"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "-startPjsipAndRegisterOnServer:withUserName:andPassword:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "appl/CallScreenViewController.m"
+            timestampString = "500459143.018834"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "-startPjsipAndRegisterOnServer:withUserName:andPassword:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "appl/CallScreenViewController.m"
+            timestampString = "500459370.910258"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "-startPjsipAndRegisterOnServer:withUserName:andPassword:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "appl/CallScreenViewController.m"
+            timestampString = "500459746.5195"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "-makeCall:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "appl/CallScreenViewController.m"
+            timestampString = "500461176.012611"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "222"
+            endingLineNumber = "222"
+            landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
