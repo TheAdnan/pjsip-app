@@ -59,7 +59,7 @@ static void error_exit1(const char *msg, pj_status_t stat);
 //Hang up call
 - (void)endCall{
     pjsua_call_hangup_all();
-      NSLog(@"radi");
+    
     
 }
 
@@ -73,8 +73,18 @@ static void error_exit1(const char *msg, pj_status_t stat);
     
     status = pjsua_call_make_call(accountID, &uriX, 0, NULL, NULL, NULL);
     if(status != PJ_SUCCESS)
+    {
+    
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Can't make call"
+                                                            message:nil
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
         
-    error_exit1("Error occurred while making a call", status);
+            [alert show];
+        error_exit1("Can't make call", status);
+        }
+
         
 }
 
